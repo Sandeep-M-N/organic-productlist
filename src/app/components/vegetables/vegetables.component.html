@@ -1,0 +1,21 @@
+
+
+<!-- <div class="card" *ngFor="let i of cardData">
+    
+    <img [src]="i.P_image" alt="Card image" class="card-image"/>
+    <div class="card-content">
+      <h2 class="card-title">{{ i.P_Name }}</h2>
+      <p class="card-price">{{ i.P_Price }}</p>
+    </div>
+    
+  </div> -->
+  <div class="card-container">
+    <div class="card" *ngFor="let product of cardData">
+      <img [src]="product.P_image" alt="{{product.P_name}}" class="card-image">
+      <div class="card-content">
+        <h3>{{ product.P_Name }}</h3>
+        <p class="price">${{ product.P_Price }}</p>
+      </div>
+    </div>
+  </div>
+  

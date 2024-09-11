@@ -14,6 +14,9 @@ import { HomepageComponent} from './components/homepage/homepage.component';
 import { HomecarouselComponent } from './components/homecarousel/homecarousel.component'; 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TwelveComponent } from './components/twelve/twelve.component';
+import { HomepagetitleComponent } from './components/homepagetitle/homepagetitle.component';
+import { HomepagecustomerreviewsComponent } from './components/homepagecustomerreviews/homepagecustomerreviews.component';
+import { OurlatestproductsComponent } from './components/ourlatestproducts/ourlatestproducts.component';
 
 
 
@@ -26,7 +29,10 @@ import { TwelveComponent } from './components/twelve/twelve.component';
     LoginComponent,
     HomepageComponent,
     HomecarouselComponent,
-    TwelveComponent
+    TwelveComponent,
+    HomepagetitleComponent,
+    HomepagecustomerreviewsComponent,
+    OurlatestproductsComponent
   ],
   imports: [
     BrowserModule,

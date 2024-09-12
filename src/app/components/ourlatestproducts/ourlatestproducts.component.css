@@ -1,69 +1,60 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-
-.text {
-  fill: none;
-  stroke-width: 2; /* Increase stroke width for better visibility */
-  stroke-linejoin: round;
-  stroke-dasharray: 60 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 3s infinite linear;
-  animation: stroke 3s infinite linear;
-  font-size: 30px; /* Increase font size */
-  font-weight: 800; /* Increase font weight */
+#txt{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:1;
+  padding-top: 92px;
+  font-family:sans-serif;
+  letter-spacing:3.5px;
+  font-size:3.5rem;
+  font-weight:700;
+  position:relative;
+  transform-style:preserve-3d;
+  perspective:100px;
+  -webkit-transform-style:preserve-3d;
+  -webkit-perspective:100px;
 }
-
-.text:nth-child(5n + 1) {
-  stroke: #F2385A;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
+#txt>b{
+  height:3.5rem;
+  box-shadow:0 .4rem .3rem -.3rem #aaa;
+  color:#979c9f;
+  background:linear-gradient(rgb(255, 254, 170),rgb(221, 40, 79),#afc);
+  background-clip:text;
+  text-fill-color:transparent;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  transform-origin:bottom;
+  transform:rotateX(-85deg);
+  -webkit-transform-origin:bottom;
+  -webkit-transform:rotateX(-85deg);
+  animation:getUp 7s infinite;
 }
-.text:nth-child(5n + 2) {
-  stroke: #F5A503;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
+#txt>b:nth-child(2){
+  animation-delay:.25s;
 }
-
-.text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
+#txt>b:nth-child(3){
+  animation-delay:.5s;
 }
-
-.text:nth-child(5n + 4) {
-  stroke: #56D9CD;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
+#txt>b:nth-child(4){
+  animation-delay:.75s;
 }
-
-.text:nth-child(5n + 5) {
-  stroke: #3AA1BF;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
+#txt>b:nth-child(5){
+  animation-delay:1s;
 }
-
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
+#txt>b:nth-child(6){
+  animation-delay:1.25s;
+}
+#txt>b:nth-child(7){
+  animation-delay:1.5s;
+}
+#txt>b:nth-child(8){
+  animation-delay:1.75s;
+}
+@keyframes getUp{
+  10%,50%{
+     transform:rotateX(0);
+  }
+  0%,60%,100%{
+     transform:rotateX(-85deg);
   }
 }
-
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
-}
-svg {
-    position: absolute;
-    top: 0; /* Align at the top */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for exact center alignment */
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  text {
-    text-anchor: middle;
-    x: 50%;
-    y: 50%;
-    dy: 0.35em;
-  }

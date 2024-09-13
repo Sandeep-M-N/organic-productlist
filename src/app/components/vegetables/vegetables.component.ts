@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class VegetablesComponent  implements OnInit {
   cardData: any;
+  product:any
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -20,6 +21,7 @@ export class VegetablesComponent  implements OnInit {
     this.http.get('http://172.17.7.104:8000/api/Product_Table/', { headers }).subscribe(
       (response: any) => {
         this.cardData=response;
+        
         console.log('response:', this.cardData[0].P_Price);
 
       },

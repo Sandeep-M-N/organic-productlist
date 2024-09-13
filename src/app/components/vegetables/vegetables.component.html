@@ -1,16 +1,12 @@
 
 
-<!-- <div class="card" *ngFor="let i of cardData">
+
     
-    <img [src]="i.P_image" alt="Card image" class="card-image"/>
-    <div class="card-content">
-      <h2 class="card-title">{{ i.P_Name }}</h2>
-      <p class="card-price">{{ i.P_Price }}</p>
-    </div>
-    
-  </div> -->
-  <div class="card-container">
-    <div class="card" *ngFor="let product of cardData">
+  
+  <!-- <div class="card-container">
+  <div class="card" *ngFor="let product of cardData"> -->
+    <!-- Conditionally display the product details if the brand is 'vegetables' -->
+    <!-- <div *ngIf="product.P_Brand === 'vegetables'">
       <img [src]="product.P_image" alt="{{product.P_name}}" class="card-image">
       <div class="card-content">
         <h3>{{ product.P_Name }}</h3>
@@ -18,4 +14,21 @@
       </div>
     </div>
   </div>
-  
+</div> -->
+<div class="card-container">
+  <div *ngFor="let product of cardData">
+    <div class="card" *ngIf="product.P_Brand === 'vegetables'">
+      <img [src]="product.P_image" alt="Product Image" class="product-image"/>
+      <div class="card-body">
+        <h3 class="product-title">{{ product.P_Name }}</h3>
+        <p class="product-price">${{ product.P_Price }}</p>
+        <div class="quantity-controls">
+          <button class="quantity-button" (click)="updateQuantity(product, -1)">-</button>
+          <span class="quantity">{{ product.P_Stock }}</span>
+          <button class="quantity-button" (click)="updateQuantity(product, 1)">+</button>
+        </div>
+        <button class="add-to-cart-button" (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

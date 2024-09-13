@@ -6,26 +6,26 @@ h1{
     color: #333; /* Dark color for contrast */
   }
   
-  .header {
+  .deader {
     display: flex;
     width: 100vw;
-    height: 150px;
-    padding-top: 70px;
+    height: 70px;
+    padding-top: 22px;
     justify-content: center;
     align-items: center;
     z-index: 10; /* Ensure it appears above other content */
   }
   
-  .letterwrapper {
+  .betterwrapper {
     display: flex;
     flex-wrap: wrap;
     transition: color 0.3s ease, transform 0.3s ease;
   }
-  .letter {
+  .better {
     font-weight: 800;
    
   }
-  .letter:hover {
+  .better:hover {
     color: #ff9800; /* Color change on hover */
     transform: scale(1.1); /* Slight zoom effect on hover */
   }

@@ -21,8 +21,12 @@ import { ContactusComponent } from './components/contactus/contactus.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FooterComponent } from './components/footer/footer.component'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { FreshproductsComponent } from './components/freshproducts/freshproducts.component';
 
 @NgModule({
 
@@ -37,7 +41,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HomepagetitleComponent,
     HomepagecustomerreviewsComponent,
     OurlatestproductsComponent,
-    ContactusComponent
+    ContactusComponent,
+    FooterComponent,
+    CarouselComponent,
+    FreshproductsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,9 @@ HttpClientModule ,
     BrowserAnimationsModule,
     MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FontAwesomeModule,
+    CarouselModule
    
    
   ],

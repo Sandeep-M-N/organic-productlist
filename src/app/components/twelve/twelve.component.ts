@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-twelve',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './twelve.component.scss'
 })
 export class TwelveComponent {
-
+  
 }

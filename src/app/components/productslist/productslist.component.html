@@ -1,40 +1,25 @@
 <div class="sidebar" [ngClass]="{ 'active': isSidebarOpen }">
-    <button class="close-btn" (click)="toggleSidebar()">×</button>
-    <h2>Menu</h2>
-    <ul>
-      <li>
-        <a href="#">Home</a>
-        <ul class="submenu">
-          <li><a routerLink="vegetables">Subhome 1</a></li>
-          <li><a href="#">Subhome 2</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">About</a>
-        <ul class="submenu">
-          <li><a href="#">Subabout 1</a></li>
-          <li><a href="#">Subabout 2</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Services</a>
-        <ul class="submenu">
-          <li><a href="#">Subservice 1</a></li>
-          <li><a href="#">Subservice 2</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-        <ul class="submenu">
-          <li><a href="#">Subcontact 1</a></li>
-          <li><a href="#">Subcontact 2</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div class="content">
-    <!-- Main content goes here -->
-     <router-outlet></router-outlet>
-  </div>
-  
-  <button class="open-btn" (click)="toggleSidebar()">☰</button>
+  <button class="close-btn" (click)="toggleSidebar()">×</button>
+  <h2>Organic Store</h2>
+  <ul>
+    <li>
+      <a href="#"><i class="fas fa-leaf"></i> 100% Organic</a>
+      <ul class="submenu">
+        <li><a routerLink="vegetables"><i class="fas fa-carrot"></i> Vegetables</a></li>
+        <li><a routerLink="fruits"><i class="fas fa-apple-alt"></i> Fruits</a></li>
+      </ul>
+    </li>
+    <li>
+      <a routerLink="nuts"><i class="fas fa-nut"></i> Nuts</a>
+    </li>
+    <li>
+      <a routerLink="oils"><i class="fas fa-oil-can"></i> Oils</a>
+    </li>
+  </ul>
+</div>
+<div class="content">
+  <!-- Main content goes here -->
+   <router-outlet></router-outlet>
+</div>
+
+<button class="open-btn" (click)="toggleSidebar()"><i class="fas fa-bars"></i></button>

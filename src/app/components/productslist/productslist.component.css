@@ -1,19 +1,21 @@
+/* Sidebar Styling */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -10px; /* Initially hidden off-screen */
+    left: 0px; /* Initially hidden off-screen */
     height: 100%;
     width: 250px;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    background: #4CAF50; /* Organic green */
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
     transform: translateX(-100%);
 }
 
 .sidebar.active {
     transform: translateX(0); /* Slide into view */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar .close-btn {
@@ -29,13 +31,14 @@
 }
 
 .sidebar .close-btn:hover {
-    color: #ffd700;
+    color: #FFD700; /* Gold color */
 }
 
 .sidebar h2 {
     padding: 20px;
     font-size: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 .sidebar ul {
@@ -53,14 +56,19 @@
 .sidebar ul li a {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffd700;
+    color: #FFD700;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
 }
 
 .submenu {
@@ -72,7 +80,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    background: #388E3C; /* Darker green */
     z-index: 10;
     opacity: 0;
     transform: translateY(-10px);
@@ -93,14 +101,15 @@
 
 .submenu li a:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    color: #ffd700;
+    color: #FFD700;
 }
 
+/* Open Button Styling */
 .open-btn {
     position: absolute;
     top: 20px;
     left: 20px;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    background: #4CAF50; /* Organic green */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -110,16 +119,33 @@
 }
 
 .open-btn:hover {
-    background: linear-gradient(135deg, #88d3ce, #6e45e2);
+    background: #388E3C; /* Darker green */
     transform: scale(1.1);
 }
 
+/* Content Styling */
 .content {
-    margin-left: 250px;
+    margin-left: 0; /* Initially hidden sidebar */
     padding: 20px;
     transition: margin-left 0.3s ease;
 }
 
 .sidebar.active ~ .content {
     margin-left: 250px; /* Adjust margin when sidebar is open */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        left: -200px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0; /* Adjust for smaller screens */
+    }
 }

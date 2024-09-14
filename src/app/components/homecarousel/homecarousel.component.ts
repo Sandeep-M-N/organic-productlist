@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { SlickCarouselComponent } from "ngx-slick-carousel";
+
 
 @Component({
   selector: 'app-homecarousel',
